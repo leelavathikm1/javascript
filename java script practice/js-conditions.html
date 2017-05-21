@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+		<script type="text/javascript">
+			/*var userInput = Number(prompt("please enter a number"));
+			if (userInput == 1) {
+				alert("your number is one")
+			}
+			if (userInput == 2) {
+				alert ("your number is two")
+			}
+			if (userInput == 3) {
+				alert ("your number is three")
+			}
+			else {
+				alert ("your number is not between 1 & 3")
+			}*/
+
+			var myArray=[];
+			for (var i = 0; i <=5; i++) {
+				myArray.push(i * 2);
+			}
+			for (var i = 0; i<=5; i++){
+				document.write(myArray.pop() + "<br/>")
+			}
+			alert(myArray.length);
+			function studentDetails(){
+			for (i=0; i<students.length; i++){
+				var myRow=document.createElement("tr")
+				for (a in students[i]){
+					var myTd=document.createElement("td")
+					myTd.innerHTML=students[i][a]
+					myRow.appendChild(myTd)
+				}
+				document.getElementById("myTable").appendChild(myRow)
+			}
+		}
+
+
+
+		}
+			</script>
+</body>
+</html>

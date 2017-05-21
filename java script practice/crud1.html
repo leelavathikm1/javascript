@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	
+	<table border=1px >
+	<tbody id="myTable">
+		<tr>
+			<th>fname</th>
+			<th>lname</th>
+			<th>tel</th>
+			<th>address</th>
+			<th>city</th>
+			<th>state</th>
+			<th>zip</th>
+			<th>Edit</th>
+			<th>Delete</th>
+
+		</tr>
+		</tbody>
+
+	</table>
+	<script type="text/javascript">
+			
+		function studentDetails(){
+			for (i=0; i<students.length; i++){
+				var myRow=document.createElement("tr")
+				for (a in students[i]){
+					var myTd=document.createElement("td")
+					myTd.innerHTML=students[i][a]
+					myRow.appendChild(myTd)
+				}
+				var myTd1=document.createElement("td")
+				var myBtn1=document.createElement("button")
+				myBtn1.innerHTML="Edit"
+				myBtn1.setAttribute("onclick" , "editStudents("+i+")")
+				myTd1.appendChild(myBtn1)
+				myRow.appendChild(myTd1)
+
+				var myTd2=document.createElement("td")
+				var myBtn2=document.createElement("button")
+				myBtn2.setAttribute("onclick" , "deleteStudents()")
+				myBtn2.innerHTML="Delete"
+				myTd2.appendChild(myBtn2)
+				myRow.appendChild(myTd2)
+
+				document.getElementById("myTable").appendChild(myRow)
+
+			}
+			}
+			function editStudents(index){
+				console.log(students[index])
+			}
+			function deleteStudents(){
+				alert()
+			}
+
+		var students=[
+		{
+			"fname": "Austin",
+			"lname": "Jouglard",
+			"tel": "(971)167-2943",
+			"address": "1482 Fringilla Ct",
+			"city": "Glencoe",
+			"state": "NY",
+			"zip": 78584
+		},
+		{
+			"fname": "Edgar",
+			"lname": "Studenka",
+			"tel": "(448)133-6838",
+			"address": "4126 Lacus Ct",
+			"city": "Baton Rouge",
+			"state": "RI",
+			"zip": 68644
+		},
+		{
+			"fname": "Haile",
+			"lname": "Treptow",
+			"tel": "(872)032-7041",
+			"address": "300 Aliquam Ct",
+			"city": "Odessa",
+			"state": "AL",
+			"zip": 94221
+		},
+		{
+			"fname": "Ann",
+			"lname": "Chew",
+			"tel": "(296)068-4714",
+			"address": "3946 Sollicitudin Dr",
+			"city": "Milwaukee",
+			"state": "VA",
+			"zip": 32460
+		},
+		{
+			"fname": "Kola",
+			"lname": "Carrothers",
+			"tel": "(984)073-6143",
+			"address": "2957 Lacus Ln",
+			"city": "Pleasant Grove",
+			"state": "TX",
+			"zip": 84683
+		},
+		{
+			"fname": "Paul",
+			"lname": "Aresti",
+			"tel": "(172)372-5905",
+			"address": "6410 Massa Ct",
+			"city": "Rachel",
+			"state": "AK",
+			"zip": 76492
+		},
+		{
+			"fname": "Ammon",
+			"lname": "Monuteaux",
+			"tel": "(700)428-1105",
+			"address": "4373 Magna Ln",
+			"city": "Rancho Cordova",
+			"state": "ME",
+			"zip": 78197
+		},
+		{
+			"fname": "Linnette",
+			"lname": "Meier",
+			"tel": "(550)974-5867",
+			"address": "2002 Rutrum Dr",
+			"city": "Madison",
+			"state": "OR",
+			"zip": 26949
+		},
+		{
+			"fname": "Lauri",
+			"lname": "Clark",
+			"tel": "(728)624-4577",
+			"address": "6386 Eros Ct",
+			"city": "Prince George",
+			"state": "KY",
+			"zip": 97432
+		},
+		{
+			"fname": "Mosharraf",
+			"lname": "Mills",
+			"tel": "(954)137-5234",
+			"address": "126 Vitae Ln",
+			"city": "Oakland",
+			"state": "AR",
+			"zip": 32364
+		}
+		]
+		studentDetails()
+
+	</script>
+</body>
+</html>
