@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <!-- The target attribute specifies if the submitted result will open in a new browser tab, a frame, or in the current window. -->
+    <form action="" target="">
+        <!-- Input Types -->
+        <!-- Each input field must have a name attribute to be submitted.
+        If the name attribute is omitted, the data of that input field will not be sent at all. -->
+        <label for="Name">First Name: </label>
+        <input type="text" placeholder="Enter name"><br><br>
+        <input type="number" value="number"> <br><br>
+        <input type="submit" value="submit"><br><br>
+        <input type="email" value="emai"><br><br>
+         <input type="month" value="image"><br><br>
+        <input type="tel" value="contact"><br><br>
+        <input type="week" value="week"><br><br>
+        <input type="datetime-local" value="Local time"><br><br>
+        <input type="checkbox" value="checkbox">checkbox<br><br>
+        <input type="password" value="password"><br><br>
+        <input type="radio" name="gender" value="male" checked><br><br>
+        <input type="range" id="a" name="a" value="50"100 +><br><br>
+        <input type="color" name="favcolor" value="#ff0000">
+        <input type="submit"><br><br>
+        <input type="search" name="googlesearch">
+        <input type="submit">
+  
+        <button>Click Me</button><br>
+        <!-- method of attribute specifies the HTTP method (GET or POST) to be used when submitting the form data:
+        After you submit, notice that the form values is visible in the address bar of the new browser tab. -->
+        <form action="/action_page.php" method="get"><br><br>
+
+        <!-- The <fieldset> element is used to group related data in a form.
+        The <legend> element defines a caption for the <fieldset> element. -->
+                <fieldset>
+                        <legend>Personal information:</legend>
+                        First name:<br>
+                        <input type="text" name="firstname" value="Mickey">
+                        <br>
+                        Last name:<br>
+                        <input type="text" name="lastname" value="Mouse">
+                        <br><br>
+                        <input type="submit" value="Submit">
+                </fieldset><br>
+        <!--The <select> element defines a drop-down list:  -->
+                <select name="Laptops">
+                        <option value="HP">HP</option>
+                        <option value="Lenova">Lenova</option>
+                        <option value="Acer">Acer</option>
+                        <option value="Compaq" selected>Compaq</option>
+                        <option value="Dell">Dell</option>
+
+                </select><br><br>
+        <!-- textarea element defines a multi-line input field insted of rows and columns you can use width and height -->
+                <textarea name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
+                <br>
+                <input type="submit">
+                      <br><br>
+                      <input type="submit"><br><br>
+        <!-- DataList datalist element specifies a list of pre-defined options for an input element-->
+                <input list="browsers" name="browser">
+            <datalist id="browsers">
+                <option value="chrome">
+                <option value="Air India">
+                <option value="Cargo">
+                <option value="Indigo">
+                <option value="Kingfisher">
+            </datalist>
+            <input type="submit"><br><br>
+        
+        <!-- Input Attributes -->
+            First name:<input type="text" name="fname" autofocus><br>
+            Last name: <input type="text" name="lname"><br>
+            <!-- form validation -->
+            E-mail: <input type="email" name="userid"><br>
+            <input type="submit" value="Submit"><br>
+            <input type="submit" formnovalidate value="Submit without validation">
+    </form>
+</body>
+</html>
