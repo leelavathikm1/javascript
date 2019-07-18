@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+
+    <style>
+    #myDiv1 div {
+    border: 2px solid;
+    width: 90px;
+    margin-right: 10px;
+    float: left;
+    text-align: center;
+    }
+    div#myDiv1 {
+    overflow: auto;
+    }
+    </style>
+</head>
+<body>
+    <ul id="myUl"></ul>
+    <select name="" id="mySelect">
+
+    </select>
+
+    <form action="" id="myRadio"></form>
+    <div id="myDiv"></div>
+    <div id="myDiv1"></div>
+    <p id="numbers" style="clear: both"></p>
+    
+
+    <script>
+    for(i=0;i<5;i++){
+        var myLi=document.createElement("li");
+        myLi.innerHTML="List Item 1";
+        document.getElementById("myUl").appendChild(myLi);
+    }
+
+    for(i=0;i<5;i++){
+        var myObj=document.createElement("option");
+        myObj.innerHTML="Option1";
+        document.getElementById("mySelect").appendChild(myObj);
+
+    }
+
+    for(i=0;i<5;i++){
+        var myInput=document.createElement("input");
+        myInput.setAttribute("type","radio");
+        document.getElementById("myRadio").appendChild(myInput);
+    }
+
+    for(i=0;i<5;i++){
+        var myCheckbox=document.createElement("input");
+        myCheckbox.setAttribute("type","checkbox");
+        document.getElementById("myRadio").appendChild(myCheckbox);
+    }
+
+    for(i=0;i<5;i++){
+        var myImage=document.createElement("img")
+        myImage.setAttribute("src","tulips.jpg");
+        document.getElementById("myDiv").style.width="500px";
+        myImage.style.width="100%";
+        document.getElementById("myDiv").appendChild(myImage);
+    }
+
+    for(i=2;i<=10;i++){
+
+        var myTable=document.createElement("div")
+        var result =""
+        for(j=1;j<=10;j++){
+            result += i+"x"+j+"="+i*j+"<br>";
+        }
+        myTable.innerHTML=result
+
+        document.getElementById("myDiv1").appendChild(myTable)
+    }
+
+    var numberDetails=""
+    for(i=1;i<100;i++){
+        numberDetails+=i+"<br>"
+    }
+    document.getElementById("numbers").innerHTML= numberDetails +"<br>";
+
+    </script>
+</body>
+</html>
